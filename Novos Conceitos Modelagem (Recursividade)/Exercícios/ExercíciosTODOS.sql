@@ -175,9 +175,9 @@ Salário DECIMAL(6,2),
 fkSetor int,
 foreign key (fkSetor) references Setor(idSetor),
 primary key (idFunc, fkSetor)
-);
+)auto_increment = 100;
 create table Acompanhante (
-idAcomp int,
+idAcomp int auto_increment,
 Nome VARCHAR(45),
 Sobrenome VARCHAR(45),
 Relação VARCHAR(45),
@@ -185,7 +185,7 @@ dtNasc DATE,
 fkFunc int,
 foreign key (fkFunc) references Funcionario(idFunc),
 primary key (idAcomp, fkFunc)
-);
+)auto_increment = 10;
 
 -- Inserir dados na tabela
 insert into Setor values
